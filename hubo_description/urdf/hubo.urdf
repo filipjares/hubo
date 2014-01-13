@@ -1252,105 +1252,105 @@
   </joint>
 
   <!-- Joints related to fingers on the left hand -->
-  <joint name="leftThumbKnuckle1" type="revolute">
+  <joint name="leftThumbKnuckle1" type="fixed">
     <origin rpy="1.5708 -0.785398 -1.5708" xyz="0.0208959 0.00192069 -0.060952"/>
     <parent link="Body_LWP"/>
     <child link="leftThumbProximal"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="-3.14" upper="3.14" velocity="1.0"/>
   </joint>
-  <joint name="leftThumbKnuckle2" type="revolute">
+  <joint name="leftThumbKnuckle2" type="fixed">
     <origin rpy="0 -0 0" xyz="0.032 0 0"/>
     <parent link="leftThumbProximal"/>
     <child link="leftThumbMedial"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="-3.14" upper="3.14" velocity="1.0"/>
   </joint>
-  <joint name="leftThumbKnuckle3" type="revolute">
+  <joint name="leftThumbKnuckle3" type="fixed">
     <origin rpy="0 -0 0" xyz="0.022 0 0"/>
     <parent link="leftThumbMedial"/>
     <child link="leftThumbDistal"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="-3.14" upper="3.14" velocity="1.0"/>
   </joint>
-  <joint name="leftPinkyKnuckle1" type="revolute">
+  <joint name="leftPinkyKnuckle1" type="fixed">
     <origin rpy="1.5708 0.785398 1.5708" xyz="-0.0281041 0.0298617 -0.088883"/>
     <parent link="Body_LWP"/>
     <child link="leftPinkyProximal"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="-3.14" upper="3.14" velocity="1.0"/>
   </joint>
-  <joint name="leftPinkyKnuckle2" type="revolute">
+  <joint name="leftPinkyKnuckle2" type="fixed">
     <origin rpy="0 -0 0" xyz="0.032 0 0"/>
     <parent link="leftPinkyProximal"/>
     <child link="leftPinkyMedial"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="-3.14" upper="3.14" velocity="1.0"/>
   </joint>
-  <joint name="leftPinkyKnuckle3" type="revolute">
+  <joint name="leftPinkyKnuckle3" type="fixed">
     <origin rpy="0 -0 0" xyz="0.022 0 0"/>
     <parent link="leftPinkyMedial"/>
     <child link="leftPinkyDistal"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="-3.14" upper="3.14" velocity="1.0"/>
   </joint>
-  <joint name="leftRingKnuckle1" type="revolute">
+  <joint name="leftRingKnuckle1" type="fixed">
     <origin rpy="1.5708 0.785398 1.5708" xyz="-0.00910415 0.0298617 -0.088883"/>
     <parent link="Body_LWP"/>
     <child link="leftRingProximal"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="-3.14" upper="3.14" velocity="1.0"/>
   </joint>
-  <joint name="leftRingKnuckle2" type="revolute">
+  <joint name="leftRingKnuckle2" type="fixed">
     <origin rpy="0 -0 0" xyz="0.032 0 0"/>
     <parent link="leftRingProximal"/>
     <child link="leftRingMedial"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="-3.14" upper="3.14" velocity="1.0"/>
   </joint>
-  <joint name="leftRingKnuckle3" type="revolute">
+  <joint name="leftRingKnuckle3" type="fixed">
     <origin rpy="0 -0 0" xyz="0.022 0 0"/>
     <parent link="leftRingMedial"/>
     <child link="leftRingDistal"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="-3.14" upper="3.14" velocity="1.0"/>
   </joint>
-  <joint name="leftMiddleKnuckle1" type="revolute">
+  <joint name="leftMiddleKnuckle1" type="fixed">
     <origin rpy="1.5708 0.785398 1.5708" xyz="0.00993585 0.0298617 -0.088883"/>
     <parent link="Body_LWP"/>
     <child link="leftMiddleProximal"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="-3.14" upper="3.14" velocity="1.0"/>
   </joint>
-  <joint name="leftMiddleKnuckle2" type="revolute">
+  <joint name="leftMiddleKnuckle2" type="fixed">
     <origin rpy="0 -0 0" xyz="0.032 0 0"/>
     <parent link="leftMiddleProximal"/>
     <child link="leftMiddleMedial"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="-3.14" upper="3.14" velocity="1.0"/>
   </joint>
-  <joint name="leftMiddleKnuckle3" type="revolute">
+  <joint name="leftMiddleKnuckle3" type="fixed">
     <origin rpy="0 -0 0" xyz="0.022 0 0"/>
     <parent link="leftMiddleMedial"/>
     <child link="leftMiddleDistal"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="-3.14" upper="3.14" velocity="1.0"/>
   </joint>
-  <joint name="leftIndexKnuckle1" type="revolute">
+  <joint name="leftIndexKnuckle1" type="fixed">
     <origin rpy="1.5708 0.785398 1.5708" xyz="0.0289159 0.0298617 -0.088883"/>
     <parent link="Body_LWP"/>
     <child link="leftIndexProximal"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="-3.14" upper="3.14" velocity="1.0"/>
   </joint>
-  <joint name="leftIndexKnuckle2" type="revolute">
+  <joint name="leftIndexKnuckle2" type="fixed">
     <origin rpy="0 -0 0" xyz="0.032 0 0"/>
     <parent link="leftIndexProximal"/>
     <child link="leftIndexMedial"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="-3.14" upper="3.14" velocity="1.0"/>
   </joint>
-  <joint name="leftIndexKnuckle3" type="revolute">
+  <joint name="leftIndexKnuckle3" type="fixed">
     <origin rpy="0 -0 0" xyz="0.022 0 0"/>
     <parent link="leftIndexMedial"/>
     <child link="leftIndexDistal"/>
@@ -1403,105 +1403,105 @@
   </joint>
 
   <!-- Joints related to fingers on the right hand -->
-  <joint name="rightThumbKnuckle1" type="revolute">
+  <joint name="rightThumbKnuckle1" type="fixed">
     <origin rpy="1.5708 -0.785398 1.5708" xyz="0.0208959 -0.00192069 -0.060952"/>
     <parent link="Body_RWP"/>
     <child link="rightThumbProximal"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="0" upper="1.57" velocity="1.0"/>
   </joint>
-  <joint name="rightThumbKnuckle2" type="revolute">
+  <joint name="rightThumbKnuckle2" type="fixed">
     <origin rpy="0 -0 0" xyz="0.032 0 0"/>
     <parent link="rightThumbProximal"/>
     <child link="rightThumbMedial"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="0" upper="1.57" velocity="1.0"/>
   </joint>
-  <joint name="rightThumbKnuckle3" type="revolute">
+  <joint name="rightThumbKnuckle3" type="fixed">
     <origin rpy="0 -0 0" xyz="0.022 0 0"/>
     <parent link="rightThumbMedial"/>
     <child link="rightThumbDistal"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="0" upper="1.57" velocity="1.0"/>
   </joint>
-  <joint name="rightPinkyKnuckle1" type="revolute">
+  <joint name="rightPinkyKnuckle1" type="fixed">
     <origin rpy="1.5708 0.785398 -1.5708" xyz="-0.0281041 -0.0298617 -0.088883"/>
     <parent link="Body_RWP"/>
     <child link="rightPinkyProximal"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="0" upper="1.57" velocity="1.0"/>
   </joint>
-  <joint name="rightPinkyKnuckle2" type="revolute">
+  <joint name="rightPinkyKnuckle2" type="fixed">
     <origin rpy="0 -0 0" xyz="0.032 0 0"/>
     <parent link="rightPinkyProximal"/>
     <child link="rightPinkyMedial"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="0" upper="1.57" velocity="1.0"/>
   </joint>
-  <joint name="rightPinkyKnuckle3" type="revolute">
+  <joint name="rightPinkyKnuckle3" type="fixed">
     <origin rpy="0 -0 0" xyz="0.022 0 0"/>
     <parent link="rightPinkyMedial"/>
     <child link="rightPinkyDistal"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="0" upper="1.57" velocity="1.0"/>
   </joint>
-  <joint name="rightRingKnuckle1" type="revolute">
+  <joint name="rightRingKnuckle1" type="fixed">
     <origin rpy="1.5708 0.785398 -1.5708" xyz="-0.00910415 -0.0298617 -0.088883"/>
     <parent link="Body_RWP"/>
     <child link="rightRingProximal"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="0" upper="1.57" velocity="1.0"/>
   </joint>
-  <joint name="rightRingKnuckle2" type="revolute">
+  <joint name="rightRingKnuckle2" type="fixed">
     <origin rpy="0 -0 0" xyz="0.032 0 0"/>
     <parent link="rightRingProximal"/>
     <child link="rightRingMedial"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="0" upper="1.57" velocity="1.0"/>
   </joint>
-  <joint name="rightRingKnuckle3" type="revolute">
+  <joint name="rightRingKnuckle3" type="fixed">
     <origin rpy="0 -0 0" xyz="0.022 0 0"/>
     <parent link="rightRingMedial"/>
     <child link="rightRingDistal"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="0" upper="1.57" velocity="1.0"/>
   </joint>
-  <joint name="rightMiddleKnuckle1" type="revolute">
+  <joint name="rightMiddleKnuckle1" type="fixed">
     <origin rpy="1.5708 0.785398 -1.5708" xyz="0.00993585 -0.0298617 -0.088883"/>
     <parent link="Body_RWP"/>
     <child link="rightMiddleProximal"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="0" upper="1.57" velocity="1.0"/>
   </joint>
-  <joint name="rightMiddleKnuckle2" type="revolute">
+  <joint name="rightMiddleKnuckle2" type="fixed">
     <origin rpy="0 -0 0" xyz="0.032 0 0"/>
     <parent link="rightMiddleProximal"/>
     <child link="rightMiddleMedial"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="0" upper="1.57" velocity="1.0"/>
   </joint>
-  <joint name="rightMiddleKnuckle3" type="revolute">
+  <joint name="rightMiddleKnuckle3" type="fixed">
     <origin rpy="0 -0 0" xyz="0.022 0 0"/>
     <parent link="rightMiddleMedial"/>
     <child link="rightMiddleDistal"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="0" upper="1.57" velocity="1.0"/>
   </joint>
-  <joint name="rightIndexKnuckle1" type="revolute">
+  <joint name="rightIndexKnuckle1" type="fixed">
     <origin rpy="1.5708 0.785398 -1.5708" xyz="0.0289159 -0.0298617 -0.088883"/>
     <parent link="Body_RWP"/>
     <child link="rightIndexProximal"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="0" upper="1.57" velocity="1.0"/>
   </joint>
-  <joint name="rightIndexKnuckle2" type="revolute">
+  <joint name="rightIndexKnuckle2" type="fixed">
     <origin rpy="0 -0 0" xyz="0.032 0 0"/>
     <parent link="rightIndexProximal"/>
     <child link="rightIndexMedial"/>
     <axis xyz="0 0 -1"/>
     <limit effort="10.0" lower="0" upper="1.57" velocity="1.0"/>
   </joint>
-  <joint name="rightIndexKnuckle3" type="revolute">
+  <joint name="rightIndexKnuckle3" type="fixed">
     <origin rpy="0 -0 0" xyz="0.022 0 0"/>
     <parent link="rightIndexMedial"/>
     <child link="rightIndexDistal"/>
@@ -1510,7 +1510,7 @@
   </joint>
 
   <!-- Waist joint -->
-  <joint name="WST" type="revolute">
+  <joint name="WST" type="fixed">
     <origin rpy="0 -0 0" xyz="0.0122662 0.00245974 -0.15262"/>
     <parent link="Body_Torso"/>
     <child link="Body_Hip"/>
