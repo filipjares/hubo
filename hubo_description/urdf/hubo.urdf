@@ -1708,6 +1708,106 @@
     </actuator>
   </transmission>
 
+  <!-- Left arm -->
+  <transmission name="LSP_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="LSP" />
+    <actuator name="LSP_motor">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="LSR_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="LSR" />
+    <actuator name="LSR_motor">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="LSY_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="LSY" />
+    <actuator name="LSY_motor">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="LEP_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="LEP" />
+    <actuator name="LEP_motor">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="LWY_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="LWY" />
+    <actuator name="LWY_motor">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="LWP_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="LWP" />
+    <actuator name="LWP_motor">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <!-- Right arm -->
+  <transmission name="RSP_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RSP" />
+    <actuator name="RSP_motor">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="RSR_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RSR" />
+    <actuator name="RSR_motor">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="RSY_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RSY" />
+    <actuator name="RSY_motor">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="REP_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="REP" />
+    <actuator name="REP_motor">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="RWY_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RWY" />
+    <actuator name="RWY_motor">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="RWP_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="RWP" />
+    <actuator name="RWP_motor">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
   <!-- ros_control plugin -->
   <gazebo>
     <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
