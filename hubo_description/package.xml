@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package>
+  <name>hubo_description</name>
+  <version>0.1.1</version>
+  <description>Description of the HUBO robot</description>
+
+  <maintainer email="filipjares@gmail.com">Filip Jares</maintainer>
+
+  <license>BSD</license>
+
+  <!-- Url tags are optional, but mutiple are allowed, one per tag -->
+  <!-- Optional attribute type can be: website, bugtracker, or repository -->
+  <url type="repository">https://github.com/filipjares/hubo</url>
+
+  <author email="br375@drexel.edu">Bharadwaj Ramesh</author>
+  <author email="wmhilton@drexel.edu">Will Hilton</author>
+  <author email="filipjares@gmail.com">Filip Jares</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+  </export>
+
+</package>

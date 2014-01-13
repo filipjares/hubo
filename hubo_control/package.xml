@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package>
+  <name>hubo_control</name>
+  <version>0.0.0</version>
+  <description>Controllers for the HUBO robot</description>
+
+  <maintainer email="filipjares@gmail.com">Filip Jares</maintainer>
+
+  <license>BSD</license>
+
+  <!-- Url tags are optional, but mutiple are allowed, one per tag -->
+  <!-- Optional attribute type can be: website, bugtracker, or repository -->
+  <url type="repository">https://github.com/filipjares/hubo</url>
+
+  <author email="br375@drexel.edu">Bharadwaj Ramesh</author>
+  <author email="filipjares@gmail.com">Filip Jares</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>controller_manager</run_depend>
+
+  <export>
+  </export>
+
+</package>
