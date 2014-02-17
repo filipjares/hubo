@@ -12,117 +12,118 @@ huboplus:
   joint_LSP_position_controller:
     type: effort_controllers/JointPositionController
     joint: LSP
-    pid: {p: 100, i: 0, d: 0}
+    pid: {p: 2400, i: 800, d: 18}
   joint_LSR_position_controller:
     type: effort_controllers/JointPositionController
     joint: LSR
-    pid: {p: 25, i: 0, d: 0.1}
+    pid: {p: 2400, i: 800, d: 18}
   joint_LSY_position_controller:
     type: effort_controllers/JointPositionController
     joint: LSY
-    pid: {p: 100, i: 0, d: 0}
+    pid: {p: 1000, i: 600, d: 6}
 
   # Right Hand Shoulder (Pitch, Roll, Yaw)
   joint_RSP_position_controller:
     type: effort_controllers/JointPositionController
     joint: RSP
-    pid: {p: 100, i: 0, d: 0}
+    pid: {p: 2400, i: 800, d: 18}
   joint_RSR_position_controller:
     type: effort_controllers/JointPositionController
     joint: RSR
-    pid: {p: 25, i: 0, d: 0.1}
+    pid: {p: 2400, i: 800, d: 18}
   joint_RSY_position_controller:
     type: effort_controllers/JointPositionController
     joint: RSY
-    pid: {p: 100, i: 0, d: 0}
+    pid: {p: 1000, i: 600, d: 6}
 
   # Left And Right Elbow
   joint_LEP_position_controller:
     type: effort_controllers/JointPositionController
     joint: LEP
-    pid: {p: 50, i: 0, d: 0}
+    pid: {p: 1000, i: 600, d: 6}
   joint_REP_position_controller:
     type: effort_controllers/JointPositionController
     joint: REP
-    pid: {p: 50, i: 0, d: 0}
+    pid: {p: 1000, i: 600, d: 6}
 
   # Left Wrist
   joint_LWY_position_controller:
     type: effort_controllers/JointPositionController
     joint: LWY
-    pid: {p: 50, i: 0, d: 0}
+    pid: {p: 1000, i: 600, d: 6}
   joint_LWP_position_controller:
     type: effort_controllers/JointPositionController
     joint: LWP
-    pid: {p: 50, i: 0, d: 0}
+    pid: {p: 1000, i: 600, d: 6}
 
   # Right Wrist
   joint_RWY_position_controller:
     type: effort_controllers/JointPositionController
     joint: RWY
-    pid: {p: 50, i: 0, d: 0}
+    pid: {p: 1000, i: 600, d: 6}
   joint_RWP_position_controller:
     type: effort_controllers/JointPositionController
     joint: RWP
-    pid: {p: 50, i: 0, d: 0}
+    pid: {p: 1000, i: 600, d: 6}
 
   # Waist
   joint_WST_position_controller:
     type: effort_controllers/JointPositionController
     joint: WST
-    pid: {p: 250, i: 0, d: 0}
+    pid: {p: 1000, i: 600, d: 6}
 
   # Left Leg (Hip Yaw, Roll and Pitch; Knee Pitch; Ankle Pitch and Roll)
   joint_LHY_position_controller:
     type: effort_controllers/JointPositionController
     joint: LHY
-    pid: {p: 250, i: 0, d: 0.15}
+    pid: {p: 2400, i: 800, d: 18}
   joint_LHR_position_controller:
     type: effort_controllers/JointPositionController
     joint: LHR
-    pid: {p: 575, i: 20, d: 0} # the original controller had integral limits
+    pid: {p: 2400, i: 800, d: 18} # the original controller had integral limits
   joint_LHP_position_controller:
     type: effort_controllers/JointPositionController
     joint: LHP
-    pid: {p: 500, i: 0, d: 0.15}
+    pid: {p: 2400, i: 800, d: 18}
   joint_LKP_position_controller:
     type: effort_controllers/JointPositionController
     joint: LKP
-    pid: {p: 200, i: 0, d: 0.15}
+    pid: {p: 2400, i: 800, d: 18}
   joint_LAP_position_controller:
     type: effort_controllers/JointPositionController
     joint: LAP
-    pid: {p: 500, i: 0, d: 0.15}
+    pid: {p: 2400, i: 800, d: 18}
   joint_LAR_position_controller:
     type: effort_controllers/JointPositionController
     joint: LAR
-    pid: {p: 390, i: 0, d: 0.1}
+    pid: {p: 2400, i: 800, d: 18}
 
   # Right Leg (Hip Yaw, Roll and Pitch; Knee Pitch; Ankle Pitch and Roll)
   joint_RHY_position_controller:
     type: effort_controllers/JointPositionController
     joint: RHY
-    pid: {p: 250, i: 0, d: 0.15}
+    pid: {p: 2400, i: 800, d: 18}
   joint_RHR_position_controller:
     type: effort_controllers/JointPositionController
     joint: RHR
-    pid: {p: 575, i: 20, d: 0} # the original controller had integral limits
+    pid: {p: 2400, i: 800, d: 18} # the original controller had integral limits
   joint_RHP_position_controller:
     type: effort_controllers/JointPositionController
     joint: RHP
-    pid: {p: 500, i: 0, d: 0.15}
+    pid: {p: 2400, i: 800, d: 18}
+  joint_RHR_position_controller:
   joint_RKP_position_controller:
     type: effort_controllers/JointPositionController
     joint: RKP
-    pid: {p: 200, i: 0, d: 0.15}
+    pid: {p: 2400, i: 800, d: 18}
   joint_RAP_position_controller:
     type: effort_controllers/JointPositionController
     joint: RAP
-    pid: {p: 500, i: 0, d: 0.15}
+    pid: {p: 2400, i: 800, d: 18}
   joint_RAR_position_controller:
     type: effort_controllers/JointPositionController
     joint: RAR
-    pid: {p: 390, i: 0, d: 0.1}
+    pid: {p: 2400, i: 800, d: 18}
 
   # Neck: Head Pitch (up and down)
   joint_HNP_position_controller:
