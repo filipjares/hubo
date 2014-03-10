@@ -1,0 +1,3 @@
+[submodule "hubo_moveit_config"]
+	path = hubo_moveit_config
+	url = git@github.com:filipjares/hubo_moveit_config
