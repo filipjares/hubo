@@ -18,7 +18,7 @@
 
   <!-- Load the URDF into the ROS Parameter Server -->
   <param name="robot_description"
-	 textfile="$(find hubo_description)/urdf/hubo.urdf" />
+     command="$(find xacro)/xacro.py '$(find hubo_description)/robots/hubo_with_kinect.urdf.xacro'" />
 
   <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
