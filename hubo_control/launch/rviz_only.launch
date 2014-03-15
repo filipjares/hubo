@@ -1,0 +1,15 @@
+<launch>
+
+  <!-- Load universal robotic description format (URDF) into the ROS Parameter Server -->
+  <param name="robot_description"
+     command="$(find xacro)/xacro.py '$(find hubo_description)/robots/hubo_with_kinect.urdf.xacro'" />
+
+  <!-- RViz -->
+  <arg name="command_args" value="-d $(find hubo_control)/config/robot_state_only.rviz" />
+  <node name="visualization" pkg="rviz" type="rviz" respawn="false"
+	args="$(arg command_args)" output="screen">
+  </node>
+
+</launch>
+
+
