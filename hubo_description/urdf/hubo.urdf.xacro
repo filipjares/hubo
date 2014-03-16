@@ -5,6 +5,14 @@
        xmlns:xacro="http://ros.org/wiki/xacro">
 
 <xacro:macro name="hubo">
+  <!-- Used to fix the hubo to the Gazebo World -->
+  <link name="world"/>
+
+  <joint name="fixTheHuboToWorld" type="fixed">
+    <parent link="world"/>
+    <child link="Body_Torso"/>
+  </joint>
+
   <link name="Body_Torso">
     <inertial>
       <mass value="7.50334"/>
@@ -1813,11 +1821,6 @@
     </plugin>
   </gazebo>
 
-  <!-- model pose -->
-  <gazebo>
-    <!-- robot model offset -->
-    <pose>0 0 1 0 0 0</pose>
-  </gazebo>
 </xacro:macro>
 
 </robot>

@@ -9,6 +9,7 @@
 
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find hubo_gazebo)/worlds/shapes.world"/>
     <arg name="debug" value="$(arg debug)" />
     <arg name="gui" value="$(arg gui)" />
     <arg name="paused" value="$(arg paused)"/>
@@ -16,16 +17,28 @@
     <arg name="headless" value="$(arg headless)"/>
   </include>
 
-  <!-- Load the URDF into the ROS Parameter Server -->
+  <!-- Load universal robotic description format (URDF) into the ROS Parameter Server -->
   <param name="robot_description"
      command="$(find xacro)/xacro.py '$(find hubo_description)/robots/hubo_with_kinect.urdf.xacro'" />
 
   <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-	args="-urdf -model huboplus -param robot_description -z 1.1"/>
+	args="-urdf -model huboplus -param robot_description -x -1.5 -z 1.5"/>
 
   <!-- hubo_control launch file -->
   <include file="$(find hubo_control)/launch/hubo_control.launch" />
+
+  <!-- MoveIt demo launch file -->
+<!--
+  <include file="$(find hubo_moveit_config)/launch/demo.launch" />
+-->
+
+  <!-- DEBUG NODES -->
+
+  <node name="camera_viewer" pkg="rqt_gui" type="rqt_gui" respawn="false" output="screen" />
+
+  <node pkg="tf" type="static_transform_publisher" name="virtual_joint_broadcaster_0" args="0 0 0 0 0 0 /hubo_location world 100" />
+
 
 </launch>
 

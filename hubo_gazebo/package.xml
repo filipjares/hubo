@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+  <name>hubo_gazebo</name>
+  <version>0.0.0</version>
+  <description>World files used with the HUBO robot in Gazebo</description>
+
+  <maintainer email="filipjares@gmail.com">Filip Jares</maintainer>
+
+  <license>BSD</license>
+
+  <author email="filipjares@gmail.com">Filip Jares</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>gazebo_ros</run_depend>
+
+  <export>
+  </export>
+
+</package>
