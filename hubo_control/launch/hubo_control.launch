@@ -6,7 +6,22 @@
   <!-- load the controllers (left and right leg and left and right arm) -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
 	output="screen" ns="/huboplus" args="joint_state_controller
-                    left_hand_controller right_hand_controller legs_controller"/>
+                    joint_LHY_position_controller joint_LHR_position_controller
+                    joint_LHP_position_controller joint_LKP_position_controller
+                    joint_LAP_position_controller joint_LAR_position_controller
+
+                    joint_RHY_position_controller joint_RHR_position_controller
+                    joint_RHP_position_controller joint_RKP_position_controller
+                    joint_RAP_position_controller joint_RAR_position_controller
+
+                    joint_LSP_position_controller joint_LSR_position_controller
+                    joint_LSY_position_controller joint_LEP_position_controller
+                    joint_LWY_position_controller joint_LWP_position_controller
+
+                    joint_RSP_position_controller joint_RSR_position_controller
+                    joint_RSY_position_controller joint_REP_position_controller
+                    joint_RWY_position_controller joint_RWP_position_controller
+                    "/>
 
                 <!-- there are joints without transmissions (waist and neck):
                     joint_WST_position_controller joint_HNP_position_controller
