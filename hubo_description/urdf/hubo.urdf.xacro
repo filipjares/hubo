@@ -1370,42 +1370,42 @@
     <parent link="Body_Torso"/>
     <child link="Body_RSP"/>
     <axis xyz="0 1 0"/>
-    <limit effort="10.0" lower="-3.14158" upper="3.14158" velocity="1.0"/>
+    <limit effort="50.0" lower="-3.14158" upper="3.14158" velocity="1.0"/>
   </joint>
   <joint name="RSR" type="revolute">
     <origin rpy="0 -0 0" xyz="0.0269 -0.072 0"/>
     <parent link="Body_RSP"/>
     <child link="Body_RSR"/>
     <axis xyz="1 0 0"/>
-    <limit effort="10.0" lower="-3.14158" upper="0" velocity="1.0"/>
+    <limit effort="50.0" lower="-3.14158" upper="0" velocity="1.0"/>
   </joint>
   <joint name="RSY" type="revolute">
     <origin rpy="0 -0 0" xyz="-0.0269 0 -0.0245"/>
     <parent link="Body_RSR"/>
     <child link="Body_RSY"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10.0" lower="-3.14158" upper="3.14158" velocity="1.0"/>
+    <limit effort="50.0" lower="-3.14158" upper="3.14158" velocity="1.0"/>
   </joint>
   <joint name="REP" type="revolute">
     <origin rpy="0 -0 0" xyz="0.0219936 0.018 -0.157505"/>
     <parent link="Body_RSY"/>
     <child link="Body_REP"/>
     <axis xyz="0 1 0"/>
-    <limit effort="10.0" lower="-2.49582" upper="0.0698132" velocity="1.0"/>
+    <limit effort="50.0" lower="-2.49582" upper="0.0698132" velocity="1.0"/>
   </joint>
   <joint name="RWY" type="revolute">
     <origin rpy="0 -0 0" xyz="-0.0219906 -0.018 -0.111408"/>
     <parent link="Body_REP"/>
     <child link="Body_RWY"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10.0" lower="-3.14158" upper="3.14158" velocity="1.0"/>
+    <limit effort="50.0" lower="-3.14158" upper="3.14158" velocity="1.0"/>
   </joint>
   <joint name="RWP" type="revolute">
     <origin rpy="0 -0 0" xyz="1.72973e-06 0.01 -0.05255"/>
     <parent link="Body_RWY"/>
     <child link="Body_RWP"/>
     <axis xyz="0 1 0"/>
-    <limit effort="10.0" lower="-1.64061" upper="1.01229" velocity="1.0"/>
+    <limit effort="50.0" lower="-1.64061" upper="1.01229" velocity="1.0"/>
   </joint>
 
   <!-- Joints related to fingers on the right hand -->
