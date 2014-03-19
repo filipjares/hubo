@@ -2,10 +2,19 @@
 <sdf version="1.4">
   <world name="default">
     <include>
-      <uri>model://ground_plane</uri>
+      <uri>model://sun</uri>
     </include>
     <include>
-      <uri>model://sun</uri>
+      <uri>model://asphalt_plane</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://drc_practice_ladder</uri>
+      <pose>-4.216 -1.908 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://house_1</uri>
+      <pose>-10 0 0  0 0 0</pose>
     </include>
     <model name="box">
       <pose>0 0 0.5 0 0 0</pose>
