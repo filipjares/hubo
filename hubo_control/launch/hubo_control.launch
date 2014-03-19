@@ -21,6 +21,8 @@
                     joint_RSP_position_controller joint_RSR_position_controller
                     joint_RSY_position_controller joint_REP_position_controller
                     joint_RWY_position_controller joint_RWP_position_controller
+
+                    joint_hand_mount_kinect_position_controller
                     "/>
 
                 <!-- there are joints without transmissions (waist and neck):

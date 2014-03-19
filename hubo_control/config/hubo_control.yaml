@@ -124,3 +124,9 @@ huboplus:
     joint: HNP
     pid: {p: 390, i: 0, d: 0.1}
 
+  joint_hand_mount_kinect_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: hand_mount_joint
+    pid: {p: 390, i: 0, d: 0.1}
+
+

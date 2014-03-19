@@ -9,11 +9,15 @@
   <!-- kinect and prosilica combo -->
   <xacro:macro name="kinect_prosilica_camera_swept_back_v0" params="name parent *origin">
     <!-- stl contains structure + kinect + prosilica combo -->
-    <joint name="${name}_joint" type="fixed">
+    <joint name="${name}_joint" type="revolute">
       <!-- <limit lower="0.1" upper="0.1" effort="10000" velocity="100.0"/> -->
       <insert_block name="origin" />
       <parent link="${parent}"/>
       <child link="${name}_link"/>
+
+      <axis xyz="0 1 0"/>
+      <limit effort="10.0" lower="-3.14158" upper="3.14158" velocity="1.0"/>
+
     </joint>
     <link name="${name}_link">
       <inertial>
@@ -63,10 +67,26 @@
     </joint>
 
     <link name="${name}_kinect_ir_optical_frame"/>
+
+    <joint name="projection_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="${M_PI/2.0} ${-M_PI/2.0} 0" />
+      <parent link="${name}_kinect_ir_optical_frame"/>
+      <child link="projection_frame"/>
+    </joint>
+    <link name="projection_frame"/>
+
     <!-- gazebo extensions -->
+    <!--<xacro:kinect_ir_gazebo_v0 link_name="${name}_kinect_ir_optical_frame" frame_name="projection_frame" camera_name="head_mount_kinect" />-->
     <xacro:kinect_ir_gazebo_v0 link_name="${name}_kinect_ir_optical_frame" camera_name="head_mount_kinect" />
 
-
+    <transmission name="${name}_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${name}_joint" />
+      <actuator name="${name}_motor">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
 
 <!--
     // kinect rgb sensor physical attachment
