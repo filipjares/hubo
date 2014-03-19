@@ -34,7 +34,7 @@ huboplus:
   joint_RSY_position_controller:
     type: effort_controllers/JointPositionController
     joint: RSY
-    pid: {p: 1000, i: 600, d: 6}
+    pid: {p: 400, i: 600, d: 6}
 
   # Left And Right Elbow
   joint_LEP_position_controller:
@@ -60,7 +60,7 @@ huboplus:
   joint_RWY_position_controller:
     type: effort_controllers/JointPositionController
     joint: RWY
-    pid: {p: 1000, i: 600, d: 6}
+    pid: {p: 400, i: 600, d: 6}
   joint_RWP_position_controller:
     type: effort_controllers/JointPositionController
     joint: RWP
