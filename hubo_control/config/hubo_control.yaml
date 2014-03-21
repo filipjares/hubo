@@ -59,3 +59,12 @@ huboplus:
     type: effort_controllers/JointPositionController
     joint: WST
     pid: {p: 1000, i: 600, d: 6}
+
+  joint_hand_sensor_controller1:
+    type: effort_controllers/JointPositionController
+    joint: hand_mount_prosilica_optical_frame_joint1
+    pid: {p: 390, i: 0, d: 0.1}
+  joint_hand_sensor_controller2:
+    type: effort_controllers/JointPositionController
+    joint: hand_mount_prosilica_optical_frame_joint
+    pid: {p: 390, i: 0, d: 0.1}

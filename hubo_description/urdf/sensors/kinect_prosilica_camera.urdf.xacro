@@ -138,14 +138,56 @@
       </collision>
     </link>
     <!-- prosilica sensor frame -->
-    <joint name="${name}_prosilica_optical_frame_joint" type="fixed">
-      <origin xyz="${cal_high_def_x}            ${cal_high_def_y}         ${cal_high_def_z}"
-                rpy="${-M_PI/2+cal_high_def_roll} ${0.0+cal_high_def_pitch} ${-M_PI/2+cal_high_def_yaw}" />
+    <joint name="${name}_prosilica_optical_frame_joint1" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <axis xyz="0 1 0" />
+      <limit effort="10.0" lower="-3.14158" upper="3.14158" velocity="1.0"/>
       <parent link="${name}_prosilica_link"/>
+      <child link="${name}_prosilica_frame1"/>
+    </joint>
+    <link name="${name}_prosilica_frame1">
+      <inertial>
+        <mass value="0.01" />
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="0.001"  ixy="0.0"  ixz="0.0"
+                 iyy="0.001"  iyz="0.0"
+                 izz="0.001" />
+      </inertial>
+    </link>
+    <joint name="${name}_prosilica_optical_frame_joint" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <axis xyz="1 0 0" />
+      <limit effort="10.0" lower="-3.14158" upper="3.14158" velocity="1.0"/>
+      <parent link="${name}_prosilica_frame1"/>
       <child link="${name}_prosilica_optical_frame"/>
     </joint>
 
-    <link name="${name}_prosilica_optical_frame"/>
+    <transmission name="${name}_trans1">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${name}_prosilica_optical_frame_joint1" />
+      <actuator name="${name}_motor1">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+    <transmission name="${name}_trans2">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${name}_prosilica_optical_frame_joint" />
+      <actuator name="${name}_motor2">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <link name="${name}_prosilica_optical_frame">
+      <inertial>
+        <mass value="0.01" />
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="0.001"  ixy="0.0"  ixz="0.0"
+                 iyy="0.001"  iyz="0.0"
+                 izz="0.001" />
+      </inertial>
+    </link>
     <!-- gazebo extensions -->
     <xacro:prosilica_cam_gazebo_v1 link_name="${name}_prosilica_link" camera_name="prosilica_camera" frame_name="${name}_prosilica_optical_frame" />
   </xacro:macro>
