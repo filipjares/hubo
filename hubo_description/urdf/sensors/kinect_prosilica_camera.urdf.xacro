@@ -111,8 +111,11 @@
 -->
 
     <!-- prosilica sensor physical attachment -->
-    <joint name="${name}_prosilica_joint" type="fixed">
+    <joint name="${name}_prosilica_joint" type="revolute">
+      <!-- thought this would make it work the way i want to <origin xyz="-0.046457 0.0125 0.088921" rpy="0 ${-M_PI/2.0} 0"/>-->
       <origin xyz="-0.046457 0.0125 0.088921" rpy="0 0 0"/>
+      <axis xyz="0 1 0" />
+      <limit effort="10.0" lower="-3.14158" upper="3.14158" velocity="1.0"/>
       <parent link="${name}_link"/>
       <child link="${name}_prosilica_link"/>
     </joint>
@@ -138,11 +141,27 @@
       </collision>
     </link>
     <!-- prosilica sensor frame -->
+    <joint name="${name}_prosilica_optical_frame_joint_z" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <axis xyz="0 0 1" />
+      <limit effort="10.0" lower="-3.14158" upper="3.14158" velocity="1.0"/>
+      <parent link="${name}_prosilica_link"/>
+      <child link="${name}_prosilica_link_z"/>
+    </joint>
+    <link name="${name}_prosilica_link_z">
+      <inertial>
+        <mass value="0.01" />
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="0.001"  ixy="0.0"  ixz="0.0"
+                 iyy="0.001"  iyz="0.0"
+                 izz="0.001" />
+      </inertial>
+    </link>
     <joint name="${name}_prosilica_optical_frame_joint1" type="revolute">
       <origin xyz="0 0 0" rpy="0 0 0" />
       <axis xyz="0 1 0" />
       <limit effort="10.0" lower="-3.14158" upper="3.14158" velocity="1.0"/>
-      <parent link="${name}_prosilica_link"/>
+      <parent link="${name}_prosilica_link_z"/>
       <child link="${name}_prosilica_frame1"/>
     </joint>
     <link name="${name}_prosilica_frame1">
@@ -162,6 +181,22 @@
       <child link="${name}_prosilica_optical_frame"/>
     </joint>
 
+    <transmission name="${name}_trans0">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${name}_prosilica_joint" />
+      <actuator name="${name}_motor0">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+    <transmission name="${name}_trans_z">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${name}_prosilica_optical_frame_joint_z" />
+      <actuator name="${name}_motor_z">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
     <transmission name="${name}_trans1">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${name}_prosilica_optical_frame_joint1" />

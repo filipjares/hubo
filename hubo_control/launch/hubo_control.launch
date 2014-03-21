@@ -7,7 +7,10 @@
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
 	output="screen" ns="/huboplus" args="joint_state_controller
                     left_hand_controller right_hand_controller legs_controller
-                    joint_hand_sensor_controller1 joint_hand_sensor_controller2
+                    joint_hand_sensor_controller0
+                    joint_hand_sensor_controller_z
+                    joint_hand_sensor_controller_y
+                    joint_hand_sensor_controller_x
 "/>
 
                 <!-- there are joints without transmissions (waist and neck):

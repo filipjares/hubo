@@ -35,7 +35,10 @@
 
   <!-- DEBUG NODES -->
 
+<!--
   <node name="camera_viewer" pkg="rqt_gui" type="rqt_gui" respawn="false" output="screen" />
+-->
+  <node name="gui_publisher" pkg="rqt_publisher" type="rqt_publisher" respawn="false" output="screen" />
 
 <!--
   <node pkg="tf" type="static_transform_publisher" name="virtual_joint_broadcaster_0" args="0 0 0 0 0 0 /hubo_location world 100" />
