@@ -23,7 +23,7 @@
 
   <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-	args="-urdf -model huboplus -param robot_description -x -1.5 -z 1.5"/>
+	args="-urdf -model huboplus -param robot_description -x -1.5 -z 1.1"/>
 
   <!-- hubo_control launch file -->
   <include file="$(find hubo_control)/launch/hubo_control.launch" />
