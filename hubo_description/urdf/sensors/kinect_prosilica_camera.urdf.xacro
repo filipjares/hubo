@@ -113,7 +113,7 @@
     <!-- prosilica sensor physical attachment -->
     <joint name="${name}_prosilica_joint" type="revolute">
       <!-- thought this would make it work the way i want to <origin xyz="-0.046457 0.0125 0.088921" rpy="0 ${-M_PI/2.0} 0"/>-->
-      <origin xyz="-0.046457 0.0125 0.088921" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <axis xyz="0 1 0" />
       <limit effort="10.0" lower="-3.14158" upper="3.14158" velocity="1.0"/>
       <parent link="${name}_link"/>
