@@ -127,7 +127,7 @@
         <pollServiceName>request_image</pollServiceName>
         <pointCloudTopicName>points</pointCloudTopicName>
         <frameName>${frame_name}</frameName>
-        <pointCloudCutoff>0.4</pointCloudCutoff>
+        <pointCloudCutoff>0.03</pointCloudCutoff>
         <distortionK1>0.0</distortionK1>
         <distortionK2>0.0</distortionK2>
         <distortionK3>0.0</distortionK3>
@@ -151,8 +151,8 @@
           <height>240</height>
         </image>
         <clip>
-          <near>0.1</near>
-          <far>100</far>
+          <near>0.03</near>
+          <far>5</far>
         </clip>
       </camera>
       <plugin name="${link_name}_sim_pcd_controller" filename="libgazebo_ros_openni_kinect.so">
@@ -165,7 +165,7 @@
         <cameraInfoTopicName>camera_info</cameraInfoTopicName>
         <pointCloudTopicName>points</pointCloudTopicName>
         <frameName>${frame_name}</frameName>
-        <pointCloudCutoff>0.4</pointCloudCutoff>
+        <pointCloudCutoff>0.03</pointCloudCutoff>
         <distortionK1>0</distortionK1>
         <distortionK2>0</distortionK2>
         <distortionK3>0</distortionK3>
