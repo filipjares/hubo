@@ -1,0 +1,1 @@
+rosrun moveit_ikfast create_ikfast_moveit_plugin.py huboplus right_arm hubo_ikfast_right_arm_plugin /home/filip/fel/dp/moveit/src/hubo_ikfast_right_arm_plugin/src/huboplus_right_arm_ikfast_solver.cpp
