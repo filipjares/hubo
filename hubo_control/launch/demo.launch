@@ -29,21 +29,29 @@
   <include file="$(find hubo_control)/launch/hubo_control.launch" />
 
   <!-- MoveIt demo launch file -->
-<!--
-  <include file="$(find hubo_moveit_config)/launch/demo.launch" />
--->
+  <!-- We launch it manually: -->
+  <!-- <include file="$(find hubo_moveit_config)/launch/demo.launch" /> -->
 
   <!-- DEBUG NODES -->
 
-<!--
-  <node name="camera_viewer" pkg="rqt_gui" type="rqt_gui" respawn="false" output="screen" />
--->
+  <!-- This node is here "only" to publish joint values of the hand-held sensor mount.
+       You can see that this is a workaround only. We had problems setting up fixed
+       joints that would do the same job: this needs to be revisited. Use the the
+       rqt_publisher to publish following set point values (message types of all
+       four topics are std_msgs/Float64):
+
+            topic name                                        | value
+            ==================================================|==================
+            /huboplus/joint_hand_sensor_controller0/command   |  0
+            /huboplus/joint_hand_sensor_controller_x/command  | -1.57
+            /huboplus/joint_hand_sensor_controller_y/command  |  0
+            /huboplus/joint_hand_sensor_controller_z/command  | -1.57
+  -->
   <node name="gui_publisher" pkg="rqt_publisher" type="rqt_publisher" respawn="false" output="screen" />
 
-<!--
+  <!--
   <node pkg="tf" type="static_transform_publisher" name="virtual_joint_broadcaster_0" args="0 0 0 0 0 0 /hubo_location world 100" />
--->
-
+  -->
 
 </launch>
 
