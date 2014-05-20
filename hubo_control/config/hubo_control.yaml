@@ -60,6 +60,12 @@ huboplus:
     joint: WST
     pid: {p: 1000, i: 600, d: 6}
 
+  # We would like to avoid these controllers and make
+  # the corresponding joints fixed. However I was
+  # not able to set up coordinate frames properly
+  # without controllable joints. Necessary set point
+  # values are documented in
+  # hubo_control/launch/demo.launch
   joint_hand_sensor_controller0:
     type: effort_controllers/JointPositionController
     joint: hand_mount_prosilica_joint
